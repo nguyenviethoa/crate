@@ -18,8 +18,7 @@ export default function (server) {
     }
   })
 
-  const upload = multer({
-    storage: storage
+  const upload = multer({ storage: storage
   }).single('file')
 
   // Upload route
