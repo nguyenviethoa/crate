@@ -19,6 +19,9 @@ module.exports = {
       role: {
         type: Sequelize.TEXT
       },
+
+      // refer to store
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

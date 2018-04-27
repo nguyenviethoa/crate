@@ -9,7 +9,9 @@
     "setup:db": "npm run db:migrate && npm run db:seed",
     "db:migrate": "./node_modules/.bin/sequelize db:migrate",
     "db:seed": "./node_modules/.bin/sequelize db:seed:all",
-    "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2"
+    "start": "nodemon src/index.js --exec babel-node --presets es2015,stage-2",
+    "model:generate": "./node_modules/.bin/sequelize model:generate --name Consumer --attributes nickname:string,firstName:string,lastName:string,email:string",
+    "create:migrate": "./node_modules/.bin/sequelize migration:create --name merchants"
   },
   "keywords": [],
   "author": "",
