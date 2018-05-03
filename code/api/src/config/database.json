@@ -1,11 +1,12 @@
 {
   "development": {
-    "username": "root",
-    "password": "12345",
-    "database": "crate",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "seederStorage": "sequelize"
+    "username": "postgres",
+    "password": "closedeal",
+    "database": "closedeal",
+    "host": "27.78.16.8",
+    "dialect": "postgres",
+    "seederStorage": "sequelize",
+    "port": "8083"
   },
   "production": {
     "username": "root",

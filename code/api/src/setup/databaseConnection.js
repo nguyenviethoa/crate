@@ -13,7 +13,8 @@ const connection = new Sequelize(databaseConfigEnv.database, databaseConfigEnv.u
   host: databaseConfigEnv.host,
   dialect: databaseConfigEnv.dialect,
   logging: false,
-  operatorsAliases: Sequelize.Op
+  operatorsAliases: Sequelize.Op,
+  port: databaseConfigEnv.port,
 })
 
 // Test connection
