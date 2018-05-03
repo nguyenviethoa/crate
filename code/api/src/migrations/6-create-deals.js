@@ -1,4 +1,4 @@
-
+'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('deals', {
@@ -10,6 +10,25 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING
+      },
+      state: {
+        type: Sequelize.STRING
+      },
+      consumerId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'consumers',
+          key: 'id'
+        },
+        allowNull: false
+      },
+      offerId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'offers',
+          key: 'id'
+        },
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -24,4 +43,4 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('deals');
   }
-}
+};
